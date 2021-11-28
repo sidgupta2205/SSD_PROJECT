@@ -24,7 +24,7 @@ Android 4.4+
 - Move to Service Folder
 - npm install
 - npm -i
-- npm node_v2-1.js
+- node node_v2-1.js
 - Move to front_end
 - Launch index.html
  

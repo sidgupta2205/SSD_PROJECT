@@ -15,3 +15,15 @@ Android 4.4+
 pip install scrapy
 python>=3.6
 scrapy>=2.5.1
+
+# Requirement for backend
+node.js >=5.
+mongoDB >=14.18.1
+
+# How to run
+- Move to Service Folder
+- npm install
+- npm -i
+- npm node.js
+- Move to front_end
+- Launch index.html 

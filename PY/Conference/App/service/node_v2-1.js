@@ -28,9 +28,44 @@ MongoClient.connect(url, function(err, db) {
     })
 });
 
+app.get('/search', cors(issue2options), function(req, res) {
+    var q = req.query.q;
+    const myArray = q.split(" ");
+    var s = ""
+    for(var i=0;i<myArray.length-1;i++)
+    {
+        s=s+myArray[i]+"|"
+    }
+    console.log(s)
+    s=s+myArray[myArray.length-1]
+    var query = {'title': {'$regex' : s, '$options' : 'i'}};
+    console.log(query);
+    dbo.collection("customers").find(query).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(typeof(result))
+        if (result.length == 0) {
+            console.log("object empty")
+            exec('python ..\\..\\script.py', function (error, stdout, stderr) {
+                console.log(error);
 
 
 
+                console.log(stdout);
+                console.log(stderr);
+                dbo.collection("customers").find(query).toArray(function(error,result2){
+                
+                    if (err) throw err;
+                    res.send(result2);
+                });
+                
+                //fetch again
+                
+            });
+        } else {
+            res.send(result);
+        }
+    });
+});
 
 
 

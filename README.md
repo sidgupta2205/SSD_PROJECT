@@ -10,3 +10,8 @@ Edge 12+
 iOS 9+
 Safari 9+
 Android 4.4+
+
+# Requirement for scrapy
+pip install scrapy
+python>=3.6
+scrapy>=2.5.1

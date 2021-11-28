@@ -33,6 +33,77 @@ MongoClient.connect(url, function(err, db) {
     })
 });
 
+app.get('/search', cors(issue2options), function(req, res) {
+    var q = req.query.q;
+    const myArray = q.split(" ");
+    myArr = q.split(" ");
+    console.log(myArray)
+    console.log(myArray.length)
+    flag = 0
+    
+
+     // break into string 
+    //save in array with no duplicates
+    var i;
+    for(i=0;i<myArray.length-1;i++)
+    {
+        console.log(myArray[i])
+        var query = {'title': {'$regex' : myArray[i], '$options' : 'i'}};
+        dbo.collection("customers").find(query).toArray(function(err, result,flag) {
+            
+            
+            if(result.length>0 && !res.headersSent)
+            {
+            res.send(result)
+
+            console.log(i+" Here1")
+            console.log(res.headersSent);
+            return
+            
+            }
+            
+    
+        });
+        console.log(i+" Here2")
+        console.log(res.headersSent)
+        
+    }
+
+    var waitTill = new Date(new Date().getTime() + 1 * 9000);
+    while(waitTill > new Date()){}
+        console.log("value of i" + i)
+        if(i==myArray.length-1)
+        {
+            console.log("Here3")
+        console.log(res.headersSent)
+        }
+         
+        if(res.headersSent)
+        {
+            console.log("object empty")
+            exec('python ..\\..\\scrwqipt.py', function (error, stdout, stderr) {
+            console.log(error);
+            console.log(stdout);
+            console.log(stderr);
+            var query = {'title': {'$regex' : q, '$options' : 'i'}};
+            dbo.collection("customers").find(query).toArray(function(error,result2){
+            
+                if (error) throw error;
+                res.send(result2);
+            });
+            
+            //fetch again
+            
+            });
+
+        }
+
+        //data not found in database
+        
+        
+    
+
+});
 
 
 

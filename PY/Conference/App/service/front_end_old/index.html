@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Conference Ranks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/cnf_style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  --> 
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h3>Conference &nbsp;<em>Ranks</em></h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Search
+                  <!-- <span class="sr-only">(current)</span> -->
+                </a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#Data">Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sources">Sources</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <div class="halign">
+            <div class="box-content col-md-4 about-text">
+                <ul style="list-style-type:disc;" class="box-list" id="slideShow">
+                  <li class="fadeInAmate">Lookup the rank of your conference.</li>
+                  <li class="fadeInAmate">Evaluate the scientific impact of these events.</li>
+                  <li class="fadeInAmate">Identify the suitable platform for your research.</li>
+                  <li class="fadeInAmate">Know the reputation of you conference.</li>
+                </ul>
+            </div>
+            <div class="s-content">
+                <h4 style="font-size: 2.5em" class="form-top">Conference Ranks</h4>
+                <!-- <h4>Lookup the rank of your conference.</h4> -->
+                <form class="example" id="myForm" action="/action_page.php" style="margin:auto;">
+                    <label for="search_inp">Search</label>
+                    <input type="text" placeholder="Search.." name="search_inp" id="search_inp">
+                      <button type="submit" onclick="searchFunc(); document.getElementById('Data').scrollIntoView();">Search</button>
+                </form>
+            </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- <div class="banner-item-02">
+          <div class="text-content">
+            <h4>Flash Deals</h4>
+            <h2>Get your best products</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4>Last Minute</h4>
+            <h2>Grab last minute deals</h2>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+<!-- <div class="dummy"></div> -->
+<div class="best-features" id="Data">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="searchHead">
+            
+          </div>
+          <!-- <div class="dummy1"></div> -->
+          <!-- <table class="table table-bordered table-striped" id ="sample_table">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Age</th>
+              <th>Number</th>
+            </tr>
+          </table> -->
+          
+           <table  id="tableID1" class="table table-striped table-main display nowrap">
+            <tr id="tableHead" class="bg-info">
+                <!-- <th class="table-col">Name</th>
+                <th class="table-col">Age</th>
+                <th class="table-col">Birthday</th> -->
+            </tr>
+
+            <tbody id="myTable">
+                
+            </tbody>
+          </table>
+          
+          <br>
+          <br>
+          <div id="pndiv">
+            
+          </div>
+  
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+<div class="best-features" id="sources">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="era-text" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+            <h2>Conference Sources</h2>
+          </div>
+          </div>
+         
+          <div class="dummy1"></div>
+
+          <div class="era-text" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="700">
+            <h4>ERA (2010)</h4>
+            This conference ranking has been created as part of the Excellence in Research in Australia (ERA). The ranking was created by Australian deans and the Australian Computing Research and Education Association of Australasia (CORE). The rankings range from A (=best) to C (=worst).
+          </div>
+          <div class="era-photo" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="700">
+            <img src="assets/images/ranks1.png" alt="">
+          </div>
+
+          <div class="space-btw"></div>
+
+          <div class="qualis-photo" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="700">
+            <img src="assets/images/ranks1.png" alt="">
+          </div>
+          <div class="qualis-text" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="700">
+            <h4>Qualis (2012)</h4>
+            This conference ranking has been published by the Brazilian ministry of education and uses the H-index as performance measure for conferences. Based on the H-index percentiles, the conferences are grouped into performance classes that range from A1 (=best), A2, B1, ..., B5 (=worst).
+          
+          </div>
+
+          <div class="space-btw"></div>
+          
+          <div class="era-text" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="900">
+            <h4>MSAR (2014)</h4>
+            Microsoft Academic's field ratings for conferences. Microsoft Academic describes field ratings as follows: "The field rating is similar to h-index in that it calculates the number of publications by an author and the distribution of citations to the publications. Field rating only calculates publications and citations within a specific field and shows the impact of the scholar or journal within that specific field"
+          </div>
+
+          <div class="era-photo" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="900">
+            <img class="rank3" src="assets/images/ranks3.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>Copyright &copy; 2021. All Rights Reserved<a rel="nofollow noopener" href="https://templatemo.com" target="_blank"></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+$("#slideShow .fadeInAmate").each(function(i) {
+  $(this).delay(1000 * i).fadeIn(2000, function() {
+    $(this).prev().addClass('foo');
+  });
+});
+
+/*console.log("Hello");
+
+var myArray = [
+      {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
+      {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
+      {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
+      {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
+      {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
+      {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
+      {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
+      {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
+      {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
+      {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
+  ]
+
+buildTable(myArray)
+
+
+
+  function buildTable(data){
+    var table = document.getElementById('myTable')
+
+    for (var i = 0; i < data.length; i++){
+      var row = `<tr>
+              <td>${data[i].name}</td>
+              <td>${data[i].age}</td>
+              <td>${data[i].birthdate}</td>
+            </tr>`
+      table.innerHTML += row
+
+
+    }
+  }*/
+
+console.log("Hello");
+var myArray = [
+      {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
+      {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
+      {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
+      {'name':'Tim', 'age':'27', 'birthdate':'3/12/1991'},
+      {'name':'Erik', 'age':'24', 'birthdate':'10/31/1995'},
+      {'name':'Michael', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'Mila', 'age':'32', 'birthdate':'10/1/1989'},
+      {'name':'Paul', 'age':'29', 'birthdate':'10/14/1990'},
+      {'name':'Dennis', 'age':'25', 'birthdate':'11/29/1993'},
+      {'name':'a', 'age':'27', 'birthdate':'3/12/1991'},
+      {'name':'b', 'age':'24', 'birthdate':'10/31/1995'},
+      {'name':'c', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'d', 'age':'32', 'birthdate':'10/1/1989'},
+      {'name':'e', 'age':'29', 'birthdate':'10/14/1990'},
+      {'name':'f', 'age':'25', 'birthdate':'11/29/1993'},
+      {'name':'g', 'age':'27', 'birthdate':'3/12/1991'},
+      {'name':'h', 'age':'24', 'birthdate':'10/31/1995'},
+      {'name':'i', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'j', 'age':'32', 'birthdate':'10/1/1989'},
+      {'name':'k', 'age':'29', 'birthdate':'10/14/1990'},
+      {'name':'l', 'age':'25', 'birthdate':'11/29/1993'},
+      {'name':'m', 'age':'27', 'birthdate':'3/12/1991'},
+      {'name':'n', 'age':'24', 'birthdate':'10/31/1995'},
+      {'name':'o', 'age':'30', 'birthdate':'11/10/1989'},
+      {'name':'p', 'age':'32', 'birthdate':'10/1/1989'},
+  ]
+
+itr=0;
+len=0;
+
+
+function buildTable2(data){
+    var table = document.getElementById('myTable')
+    var i=0;
+    console.log("len=")
+    console.log(len)
+    console.log("itr=")
+    console.log(itr)
+    table.innerHTML = `<tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>`
+    for (i = itr; i < len; i++){
+      var row = `<tr>
+              <td>${data[i].name}</td>
+              <td>${data[i].age}</td>
+              <td>${data[i].birthdate}</td>
+            </tr>`
+      table.innerHTML += row
+      
+
+    }
+}
+
+
+  function buildTable(data){
+
+    var sHead = document.getElementById('searchHead');
+    var sContent = `<h2 class="sResult">Search Result</h2>`
+    sHead.innerHTML = sContent;
+
+    var thead = document.getElementById('tableHead');
+    var trow = `<tr id="tableHead" class="bg-info">
+                <th class="table-col">Names</th>
+                <th class="table-col">Age</th>
+                <th class="table-col">Birthday</th>
+                </tr>`
+    thead.innerHTML = trow;
+    var table = document.getElementById('myTable')
+
+    /*for (i = 0; i < 10; i++){
+      var row = `<tr>
+              <td>${data[i+itr].name}</td>
+              <td>${data[i+itr].age}</td>
+              <td>${data[i+itr].birthdate}</td>
+            </tr>`
+      table.innerHTML = row
+      
+
+    }*/
+    len = data.length;
+    
+    var row = `<tr>
+                <td>${data[itr].name}</td>
+                <td>${data[itr].age}</td>
+                <td>${data[itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[1+itr].name}</td>
+                <td>${data[1+itr].age}</td>
+                <td>${data[1+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[2+itr].name}</td>
+                <td>${data[2+itr].age}</td>
+                <td>${data[2+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[3+itr].name}</td>
+                <td>${data[3+itr].age}</td>
+                <td>${data[3+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[4+itr].name}</td>
+                <td>${data[4+itr].age}</td>
+                <td>${data[4+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[5+itr].name}</td>
+                <td>${data[5+itr].age}</td>
+                <td>${data[5+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[6+itr].name}</td>
+                <td>${data[6+itr].age}</td>
+                <td>${data[6+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[7+itr].name}</td>
+                <td>${data[7+itr].age}</td>
+                <td>${data[7+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[8+itr].name}</td>
+                <td>${data[8+itr].age}</td>
+                <td>${data[8+itr].birthdate}</td>
+              </tr>
+              <tr>
+                <td>${data[9+itr].name}</td>
+                <td>${data[9+itr].age}</td>
+                <td>${data[9+itr].birthdate}</td>
+              </tr>
+            `
+      table.innerHTML = row
+      var pndiv = document.getElementById('pndiv');
+      var divContent = `<button class="btn-nav" onclick="myFunction1()">Prev</button>
+            <button class="btn-nav btn2" onclick="myFunction2()">Next</button>`
+      pndiv.innerHTML = divContent;
+  }
+
+
+/*buildTable(myArray)*/
+
+function myFunction1() {
+  if(itr>0){
+  itr = itr-10;
+  buildTable(myArray);
+  console.log(itr);
+}
+}
+
+function myFunction2() {
+  if(itr+20<len){
+    itr=itr+10;
+    buildTable(myArray);
+    console.log(itr);
+  }
+  else if(itr+10<len){
+    itr=itr+10;
+    buildTable2(myArray);
+    console.log(itr);
+  }
+}
+
+  /*Fetch data*/
+  const myForm = document.getElementById('myForm');
+  myForm.addEventListener('submit', function (e){
+    e.preventDefault();
+    const formData = new FormData(this);
+
+    fetch('/').then(function(response) {
+      method : 'post';
+      body : formData;
+      return response.json();
+    }).then(function(json) {
+    
+    let products = json;
+    /*initialize(products);*/
+    
+    }).catch(function(err) {
+    
+    console.log('Fetch problem: ' + err.message);
+    });
+  });
+  console.log("Hello0000");
+
+function searchFunc() {
+  buildTable(myArray);
+}
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://jforaker.github.io/jQuery-FadeInAmate/src/jquery.fadeInAmate.js"></script>
+
+
+    <script language = "text/Javascript"> 
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+
+     
+    </script>
+
+
+  </body>
+
+</html>

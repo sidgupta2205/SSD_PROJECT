@@ -12,13 +12,13 @@ Safari 9+
 Android 4.4+
 
 # Requirement for scrapy
-pip install scrapy
-python>=3.6
-scrapy>=2.5.1
+- pip install scrapy
+- python>=3.6
+- scrapy>=2.5.1
 
 # Requirement for backend
-node.js >=5.
-mongoDB >=14.18.1
+- node.js >=14.18.1
+- mongoDB >=4.0
 
 # How to run
 - Move to Service Folder
